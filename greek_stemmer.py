@@ -1,4 +1,5 @@
  # -*- coding: utf-8-*-
+from builtins import object
 import re
 import os
 import yaml
@@ -36,7 +37,7 @@ class GreekStemmer(object):
         self.protected_words = custom_rules['protected_words']
 
         self.step_1_regexp = re.compile(
-                u"(.*)({})$".format("|".join(self.step_1_exceptions.keys())))
+                u"(.*)({})$".format("|".join(list(self.step_1_exceptions.keys()))))
 
     def stem(self, word):
         if len(word) < 3:
