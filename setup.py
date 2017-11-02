@@ -24,7 +24,7 @@ setup(
     py_modules=["greek_stemmer"],
     package_data={'': ['LICENSE']},
     include_package_data=True,
-    install_requires=['PyYAML'],
+    install_requires=['PyYAML', 'future'],
     license='MIT',
     zip_safe=False,
     classifiers=(
