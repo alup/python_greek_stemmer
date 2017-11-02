@@ -21,7 +21,7 @@ setup(
     author='Andreas Loupasakis',
     author_email='alup@skroutz.gr',
     url='https://github.com/alup/python_greek_stemmer',
-    py_modules=["greek_stemmer"],
+    packages=['greek_stemmer'],
     package_data={'': ['LICENSE']},
     include_package_data=True,
     install_requires=['PyYAML', 'future'],
