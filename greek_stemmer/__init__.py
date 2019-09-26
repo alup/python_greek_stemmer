@@ -336,7 +336,7 @@ class GreekStemmer(object):
     def load_settings(self):
         custom_rules = ""
         with open(os.path.join(
-                  os.path.dirname(__file__), 'stemmer.yml'), 'r') as f:
+                  os.path.dirname(__file__), 'stemmer.yml'), 'r', encoding='utf8') as f:
             custom_rules = yaml.load(f.read())
         return custom_rules
 
