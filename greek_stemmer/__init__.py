@@ -336,8 +336,8 @@ class GreekStemmer(object):
     def load_settings(self):
         custom_rules = ""
         with open(os.path.join(
-                  os.path.dirname(__file__), 'stemmer.yml'), 'r') as f:
-            custom_rules = yaml.load(f.read())
+                  os.path.dirname(__file__), 'stemmer.yml'), 'r', encoding='utf8') as f:
+            custom_rules = yaml.load(f.read(), Loader=yaml.FullLoader)
         return custom_rules
 
     def long_stem_list(self, word):
